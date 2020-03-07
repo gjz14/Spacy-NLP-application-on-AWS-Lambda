@@ -17,5 +17,5 @@ feel free to deploy your own lambda function.
 ## Reference
 https://www.udemy.com/course/deploy-serverless-machine-learning-models-to-aws-lambda/
 
-
+## Sample Screenshot
 ![](imgs/NLP)
