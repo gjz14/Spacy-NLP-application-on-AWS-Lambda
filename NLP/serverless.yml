@@ -1,0 +1,40 @@
+service: ner-api
+provider:
+  name: aws
+  runtime: python3.6
+
+  stage: dev
+  region: us-west-2
+
+
+# you can add packaging information here
+package:
+#  include:
+#    - include-me.py
+#    - include-me-dir/**
+  exclude:
+    - node_modules/**
+    - __pycache__/**
+    
+
+functions:
+  recognize-named-entities:
+    handler: handler.handle_request
+    memorySize: 1536
+    timeout: 30
+    events:
+      - http:
+          path: ner
+          method: post
+          
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+    slim: true
+    zip: true
+    noDeploy: []
+    useDownloadCache: true
+    useStaticCache: true
