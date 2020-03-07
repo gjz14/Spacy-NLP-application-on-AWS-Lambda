@@ -18,4 +18,4 @@ feel free to deploy your own lambda function.
 https://www.udemy.com/course/deploy-serverless-machine-learning-models-to-aws-lambda/
 
 
-![](images/NLP)
+![](imgs/NLP)
